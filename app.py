@@ -24,7 +24,8 @@ input_text = st.text_input("Ask about something you want")
 
 ### Ollama Model
 
-llm=ChatOllama(model="gemma:2b")
+llm=ChatOllama(model="gemma:2b",
+              temperature=0.7)
 output_parser = StrOutputParser()
 chain = prompt|llm|output_parser
 
